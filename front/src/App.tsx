@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import { io } from 'socket.io-client'
 import './App.css'
 
-const socket = io('http://localhost:3000');
+const socket = io(import.meta.env.VITE_BACK_URL);
 
 socket.on('connect', () => {
 

@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 const { createSocketController } = require('./controllers/SocketController');
 const io = require("socket.io")(server, {
     cors: {
-      origin: "http://localhost:5173",
+      origin: ["http://localhost:5173", "https://social-network-front.vercel.app"],
       methods: ["GET", "POST"]
     }
   });require('dotenv').config();
